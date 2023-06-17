@@ -147,12 +147,13 @@ p.submenu-title img{
 }
 .gc-top-section {
   margin-top: 69px;
+  position: relative;
 }
 .top-section .gc-absolute-section {
   position: absolute;
-  top: 100px;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 100%);
+  transform: translate(-50%, -50%);
   z-index: 1;
   text-align: center;
   
@@ -610,7 +611,7 @@ li.footer-link a {
       margin-top: 0px !important;
   }
   .top-section .gc-absolute-section {
-     top: 65px !important;
+     /*top: 65px !important;*/
   }
 }
 @media (max-width:768px) and (min-width:575px) {
@@ -622,7 +623,7 @@ li.footer-link a {
     margin-top: 0px !important;
 }
 .top-section .gc-absolute-section {
-   top: 0px !important;
+   /*top: 0px !important;*/
 }
 .gc-details-section div div h5{
   margin-top: 20px;
@@ -639,7 +640,7 @@ li.footer-link a {
     margin-bottom: 5px !important;
 }
 .top-section .gc-absolute-section {
-   top: 0px !important;
+   /*top: 0px !important;*/
 }
 .top-section .gc-absolute-section a.btn.entroll-now-button{
   margin-top: 0px !important;
@@ -681,7 +682,7 @@ li.footer-link a {
     margin-bottom: 0px !important;
 }
 .top-section .gc-absolute-section {
-   top: 0px !important;
+  /* top: 0px !important;*/
 }
 .top-section .gc-absolute-section a.btn.entroll-now-button{
   margin-top: 0px !important;
@@ -716,7 +717,7 @@ li.footer-link a {
 
 @media (min-width:1700px) {
   .top-section .gc-absolute-section {
-    top: 300px !important;
+    /*top: 300px !important;*/
   }
 }
 
