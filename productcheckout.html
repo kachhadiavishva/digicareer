@@ -1,0 +1,189 @@
+<head>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script> 
+      $(function(){ $("#myHeader").load("includes/full_header.html") });
+      $(function(){ $("#mysidebar").load("includes/sidebar.html") });
+   </script>
+    
+<header id="myHeader"></header>
+<div class="wrapper gc-top-section">
+
+    <!--side bar should here-->
+    <section id="mysidebar"></section>  
+    
+    <!-- other page content should be here  -->
+    <div id="content">
+        <div class="md-stepper-horizontal orange">
+            <div class="md-step active">
+              <div class="md-step-circle"><span>1</span></div>
+              <div class="md-step-title">Items</div>
+              <div class="md-step-bar-left"></div>
+              <div class="md-step-bar-right"></div>
+            </div>
+            <div class="md-step active">
+              <div class="md-step-circle"><span>2</span></div>
+              <div class="md-step-title">Delivery</div>
+              <div class="md-step-bar-left"></div>
+              <div class="md-step-bar-right"></div>
+            </div>
+            <div class="md-step">
+              <div class="md-step-circle"><span>3</span></div>
+              <div class="md-step-title">Confirmation</div>
+              <div class="md-step-bar-left"></div>
+              <div class="md-step-bar-right"></div>
+            </div>
+           
+        </div>
+
+        <div class="row checkout-box">
+            <div class="col-xl-8 col-lg-12 col-md-12 col-12">
+                <div class="product-card pt-1">
+                    <form class="form-section mb-1 pb-1 pt-1">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-4">
+                                <p class="text-darker">
+                                    Shipping Address
+                                </p>
+                                <hr>
+
+                                <div class="input-group">
+                                    <label>Address</label>
+                                    <div>
+                                        <textarea rows="5" class="form-control" placeholder="Write your message here,,." ></textarea>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>City</label>
+                                    <div>
+                                        <span>
+                                           <img src="assets/location-gray.png">
+                                        </span>
+                                        <select class="form-control">
+                                           <option value="Gujarat">Gujarat</option>
+                                           <option value="Mumbai">Mumbai</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>State</label>
+                                    <div>
+                                        <span>
+                                           <img src="assets/location-gray.png">
+                                        </span>
+                                        <select class="form-control">
+                                           <option value="Gujarat">Gujarat</option>
+                                           <option value="Mumbai">Mumbai</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>Pincode</label>
+                                    <div>
+                                        <span>
+                                           <img src="assets/psw-gray.png">
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Enter your password" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6  col-sm-6 col-12 mt-4">
+                                <p class="text-darker">
+                                    Billing Address
+                                </p>
+                                <hr>
+
+                                <div class="input-group">
+                                    <label>Address</label>
+                                    <div>
+                                        <textarea rows="5" class="form-control" placeholder="Write your message here,,." ></textarea>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>City</label>
+                                    <div>
+                                        <span>
+                                           <img src="assets/location-gray.png">
+                                        </span>
+                                        <select class="form-control">
+                                           <option value="Gujarat">Gujarat</option>
+                                           <option value="Mumbai">Mumbai</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>State</label>
+                                    <div>
+                                        <span>
+                                           <img src="assets/location-gray.png">
+                                        </span>
+                                        <select class="form-control">
+                                           <option value="Gujarat">Gujarat</option>
+                                           <option value="Mumbai">Mumbai</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label>Pincode</label>
+                                    <div>
+                                        <span>
+                                           <img src="assets/psw-gray.png">
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Enter your password" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6  col-sm-6 col-12 mt-4">
+                                <div class="form-group">
+                                    <input type="checkbox" id="agree">
+                                    <label for="agree">Lorem ipsum doller dummy text</label>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6  col-sm-6 col-12 text-right mt-4">
+                                <button class="btn entroll-now-button animation-btn" type="submit">Signup</button>
+                            
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-xl-4 col-lg-12 col-sm-12 col-12 ">
+                <div class="product-card pt-4">
+                    <div class="pricing-dtl-checkout pt-1">
+                        <p class="text-darker">Subtotal</p>
+                        <p class="text-darker"><i class="fa fa-inr"></i>  13392.90</p>
+                    </div>
+                    <div class="pricing-dtl-checkout">
+                        <p class="text-lighter">TAX</p>
+                        <p class="text-lighter"><i class="fa fa-inr"></i>  13392.90</p>
+                    </div>
+                    <div class="pricing-dtl-checkout">
+                        <p class="text-lighter">Shipping</p>
+                        <p class="text-lighter"><i class="fa fa-inr"></i>  13392.90</p>
+                    </div>
+                    <div class="pricing-dtl-checkout">
+                        <p class="text-lighter">Distributor Discount</p>
+                        <p class="text-lighter"><i class="fa fa-inr"></i>  1.90</p>
+                    </div>
+                    <div class="pricing-dtl-checkout">
+                        <p class="text-lighter">Total BV</p>
+                        <p class="text-lighter"><i class="fa fa-inr"></i>  13392.90</p>
+                    </div>
+                    <hr>
+                    <div class="pricing-dtl-checkout">
+                        <p class="text-darker">Total</p>
+                        <p class="text-darker"><i class="fa fa-inr"></i>  13392.90</p>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn checkout-btn">
+                            Checkout
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

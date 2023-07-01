@@ -1,11 +1,6 @@
 
 <head>
 <script src="js/jquery-3.4.1.min.js"></script>
-
-<script> 
-     $(function(){ $("#myHead").load("includes/head.html") });	 
-</script>
-<header id="myHead"></header>
 <script>
   $(function() {
     $(".preload").fadeOut(2000, function() {
@@ -28,12 +23,18 @@ body {display:none;}
 }
 </style>
 
-<body class="
+<script> 
+     $(function(){ $("#myHead").load("includes/head.html") });	 
+</script>
+ 
+<header id="myHead"></header>
 
-">
 
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
+
+<body class="">
+
+<nav class="navbar navbar-expand-lg box-shadow-nav">
+  <div class="container-fluid sidebar-header sidebar-header-active">
   <a class="navbar-brand" href="#">
     <img src="assets/original-logo.png">
   </a>
@@ -45,10 +46,10 @@ body {display:none;}
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ">
-        <a class="nav-link active"  href="#">Home</a>
+        <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Packages
         </a>
         <!--<div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
@@ -88,19 +89,23 @@ body {display:none;}
                   <li><a class="dropdown-item" href="#">Marketing Mastery 2.2</a></li>
                 </ul>
               </li>
+
+
+
             </ul>
           </li>
         </ul>
         
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" tabindex="-1" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+        </ul>
       </li>
     </ul>
-    <div class="other-tab-data">
-      <a class="btn entroll-now-button animation-btn" href="signup.html">Enroll Now</a>
-      <a class="btn login-button fill" href="login.html" >Login</a>
-    <!--<div id="movetobottom">
+    <div id="movetobottom">
       <div class="cart-profile-noti" id="lastHeader" >
         <ul class="list-unstyled navbar-nav mr-auto" style="flex-direction: row; ">
           <li class="nav-item dropdown">
@@ -133,13 +138,10 @@ body {display:none;}
           </li>
         </ul>
       </div>
-    </div>-->
     </div>
+    
   </div>
 </div>
 </nav>
 
 
-<script>
-  //alert(location.pathname.split('/').slice(-1)[0]);
-</script>

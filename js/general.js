@@ -241,6 +241,29 @@ if ($('.dc-our-partner-slick').length) {
   });
 }
 
+$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  dots: false,
+  focusOnSelect: true,
+  arrow:true,
+  prevArrow: '<img src="assets/left-arrow-border.png" class="prev">',
+  nextArrow: '<img src="assets/right-arrow-border.png" class="next">',
+});
+
+setInterval(() => {
+  $('.slider-nav').slick('refresh');
+  $('.slider-for').slick('refresh');
+}, 2000);
+
 
  $('.dropdown').on('show.bs.dropdown', function() {
     $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
@@ -265,8 +288,7 @@ if ($('.dc-our-partner-slick').length) {
   
     return false;
   });
- 
-
+  
   
 });
 
@@ -334,3 +356,201 @@ $(document).on('click', '.show-more', function() {
     that.toggleClass('more-times', 'less-times').attr('src','assets/down-blue-arrow.png');
   }  
 });
+
+
+$(document).ready(function () {
+  $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+      $('.text-sidebar').toggleClass('active');
+      $('.sidebar-header').toggleClass('sidebar-header-active');
+  });
+});
+
+$(document).ready(()=>{
+  $('#file-input').change(function(){
+    const file = this.files[0];
+    console.log(file);
+    if (file){
+      let reader = new FileReader();
+      reader.onload = function(event){
+        console.log(event.target.result);
+        $('#imgPreview').attr('src', event.target.result);
+      }
+      reader.readAsDataURL(file);
+    }
+  });
+});
+
+$(document).ready(function () { 
+ 
+var paused = false;
+  $(window).scroll(function(){
+    if ($('.dc-team-section').length) {
+      if( $(window).scrollTop() > ($(".dc-team-section").offset().top-500) ) {
+          if( !paused ){
+            $('.dc-team-slick').slick('refresh');
+              paused = true;
+          }        
+      }
+    }
+  });
+});
+
+//move header in small device
+
+$(document).ready(function(){
+    var w = $(window).width();
+      if(w > 991) {
+         $("#lastHeader").appendTo($("#movetobottom"));
+      }
+      else {
+          $("#lastHeader").appendTo($("#movetotop"));
+      }
+ });
+
+ $(window).resize(function(){
+         var w = $(window).width();
+         if(w > 991) {
+            $("#lastHeader").appendTo($("#movetobottom"));
+         }
+         else {
+             $("#lastHeader").appendTo($("#movetotop"));
+         }
+     });
+
+///
+if ($('#container-1').length) {
+Highcharts.chart('container-1', {
+
+  chart: {
+      type: 'solidgauge',
+      height: '110%',
+      events: {
+          //render: renderIcons
+      }
+  },
+
+  title: {
+      text: '',
+      style: {
+          fontSize: '24px'
+      }
+  },
+
+  tooltip: {
+    enabled: false
+      /*borderWidth: 0,
+      backgroundColor: 'none',
+      shadow: false,
+      style: {
+          fontSize: '16px'
+      },
+      valueSuffix: '%',
+      pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}</span>',
+      positioner: function (labelWidth) {
+          return {
+              x: (this.chart.chartWidth - labelWidth) / 2,
+              y: (this.chart.plotHeight / 2) + 15
+          };
+      }*/
+  },
+
+  pane: {
+      startAngle: 0,
+      endAngle: 360,
+      background: [{ // Track for Move
+          outerRadius: '112%',
+          innerRadius: '88%',
+          // backgroundColor: Highcharts.color(Highcharts.getOptions().colors[0])
+          //     .setOpacity(0.3)
+          //     .get(),
+          backgroundColor:'#98C220',
+          borderWidth: 0
+      }]
+  },
+
+  yAxis: {
+      min: 0,
+      max: 100,
+      lineWidth: 0,
+      tickPositions: []
+  },
+
+  plotOptions: {
+      solidgauge: {
+          dataLabels: {
+              enabled: false
+          },
+          linecap: 'round',
+          stickyTracking: false,
+          rounded: true
+      }
+  },
+
+  series: [{
+      name: 'Progress',
+      data: [{
+          color: '#48B1E8',
+          radius: '112%',
+          innerRadius: '88%',
+          y: 70
+      }]
+  }]
+});
+}
+
+// Build the chart
+if ($('#container-2').length) {
+Highcharts.chart('container-2', {
+  chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie'
+  },
+  title: {
+      text: '',
+      align: 'left'
+  },
+  tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+  },
+  accessibility: {
+      point: {
+          valueSuffix: '%'
+      }
+  },
+  plotOptions: {
+      pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+              enabled: false
+          },
+          showInLegend: true
+      }
+  },
+  series: [{
+      name: 'Brands',
+      colorByPoint: true,
+      data: [{
+          name: 'Branding Mastery',
+          y: 65,
+          sliced: true,
+          selected: true,
+          color:'#FFA726',
+      },  {
+          name: 'Traffic Mastery',
+          y: 10,
+          color:'#F06292',
+      },  {
+          name: 'Influence Mastery',
+          y: 25,
+          color:'#26C6DA',
+      }]
+  }]
+});
+
+}
+
+

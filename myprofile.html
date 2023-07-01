@@ -1,0 +1,600 @@
+<head>
+  <link rel="stylesheet" href="datatable/jquery.dataTables.min.css" />
+  <link href="datatable/dataTables.responsive.css" />
+  <link rel="stylesheet" type="text/css" href="datatable/responsive.bootstrap.min.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+    <script> 
+      $(function(){ $("#myHeader").load("includes/full_header.html") });
+      $(function(){ $("#mysidebar").load("includes/sidebar.html") });
+   </script>
+    
+ <header id="myHeader"></header>
+ 
+
+<div class="wrapper gc-top-section">
+
+  <!--side bar should here-->
+  <section id="mysidebar"></section>  
+ 
+  <!-- other page content should be here  -->
+  <div id="content">
+    <section class="admin-main-section profile-section"> 
+      <form class="form-section">
+        <div class="row">
+            <div class="col-xl-2 col-lg-3 col-md-12 col-sm-12 col-12 text-center">
+                <div class="image-upload text-center">
+                  <label for="file-input" style="position: relative;">
+                    <img src="assets/profile.png" class="small-img">
+                      <img src="assets/150x150.png" id="imgPreview"/>
+                  </label>
+                  <input id="file-input" type="file"/>
+                </div>
+                <h3 class="name-title">Satyanand Arya</h3>
+                <p class="join-dob-grey">Joined On 22-06-2023</p>
+                <img src="assets/green-pill.png" class="mb-3">
+            </div>
+            <div class="col-xl-10 col-lg-9 right-about-block">
+                 <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-12">
+                      <h2>
+                        Basic Details
+                      </h2>
+                    <img src="assets/Vector 4line.png">
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <div class="input-group">
+                        <label>Full Name</label>
+                        <div>
+                            <span>
+                               <img src="assets/user.png">
+                            </span>
+                            <input type="text" class="form-control" placeholder="Enter your full name" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <div class="input-group">
+                        <label>Email Id</label>
+                        <div>
+                            <span>
+                               <img src="assets/email-gray.png">
+                            </span>
+                            <input type="text" class="form-control" placeholder="Enter your email id" />
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <div class="input-group">
+                        <label>User Name</label>
+                        <div>
+                            <span>
+                               <img src="assets/user.png">
+                            </span>
+                            <input type="text" class="form-control" placeholder="Enter your user name" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <div class="input-group">
+                        <label>Currency</label>
+                        <div>
+                            <span>
+                               <img src="assets/gender-gray.png">
+                            </span>
+                            <select class="form-control">
+                               <option value="Pound">Pound</option>
+                               <option value="Rupees">Rupees</option>
+                            </select>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <div class="input-group">
+                        <label>Mobile Number</label>
+                        <div>
+                            <span>
+                               <img src="assets/phone-gray.png">
+                            </span>
+                            <input type="text" class="form-control" placeholder="Enter your mobile number" />
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <div class="input-group">
+                        <label>Gender</label>
+                        <div>
+                            <span>
+                               <img src="assets/gender-gray.png">
+                            </span>
+                            <select class="form-control">
+                               <option value="Male">Male</option>
+                               <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <div class="input-group">
+                        <label>Date of Birth</label>
+                        <div>
+                            <span>
+                               <img src="assets/dob-gray.png">
+                            </span>
+                            <input type="date" name="selectDate"  class="form-control " onfocus="this.showPicker()" placeholder="10-06-2023" />
+                            <span class="calender">
+                                <img src="assets/c-icon.png" class="" onclick="searchPending.selectDate.showPicker()">
+                             </span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <div class="input-group">
+                        <label>GSTIN</label>
+                        <div>
+                            <span>
+                               <img src="assets/psw-gray.png">
+                            </span>
+                            <input type="text" class="form-control" placeholder="Enter your password" />
+                        </div>
+                      </div>
+                    </div>
+                   
+                 </div>
+                 <div class="row">
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 mt-4 text-left align-self-center">
+                      <div class="form-group">
+                        <input type="checkbox" id="agree">
+                        <label for="agree">Lorem ipsum doller dummy text</label>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 text-right">
+                        <div class="d-flex-btn">
+                          <button class="btn animation-btn border-btn mt-4" type="submit">Update</button>
+                          <button class="btn animation-btn bg-btn mt-4" type="submit">Next</button>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </form>
+    </section>
+    
+    <section class="admin-main-section  mt-3"> 
+        <div class="row">
+           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+              <div class="input-group without-icon">
+                <div>
+                    <select class="form-control">
+                      <option value="All">All</option>
+                      <option value="Female">Female</option>
+                    </select>
+                </div>
+              </div>
+           </div>
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+              <div class="input-group without-icon">
+                <div>
+                    <select class="form-control">
+                      <option value="">Select Package</option>
+                      <option value="Female">Female</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+              <div class="input-group without-icon">
+                <div>
+                    <select class="form-control">
+                      <option value="">Level</option>
+                      <option value="Female">Female</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+              <div class="input-group without-icon">
+                <div>
+                    <select class="form-control">
+                      <option value="">Start Level</option>
+                      <option value="Female">Female</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+              <div class="input-group without-icon">
+                <div>
+                    <select class="form-control">
+                      <option value="">End Level</option>
+                      <option value="Female">Female</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+              <div class="input-group without-icon">
+                <div>
+                    <select class="form-control">
+                      <option value="">Start Date | End Date</option>
+                      <option value="Female">Female 1</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+              <div class="input-group without-icon">
+                <div>
+                    <select class="form-control">
+                      <option value="">Female</option>
+                      <option value="Female">Female</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="row">
+            <div class="col-xl-9 col-lg-8">
+              <div class="input-group without-icon">
+                <input type="text" placeholder="Search Records" class="form-control">
+                <button class="btn search-btn">Search</button>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 align-self-center">
+              <div class="input-group without-icon">
+                <a class="copy-excel-pdf">Copy</a>
+                <a class="copy-excel-pdf">Excel</a>
+                <a class="copy-excel-pdf">PDF</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-12 col-12">
+              <table id="user-record" class="table table-bordered dt-responsive mt-4" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Actions</th>
+                        <th>Sr. No.</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Current Package</th>
+                        <th>Activated At</th>
+                        <th>Rank</th>
+                        <th>Achieve Rank</th>
+                        <th>Upline</th>
+                        <th>Sponsor</th>
+                        <th>DOJ</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                          <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                          <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                          <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                          <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                        </td>
+                        <td>1</td>
+                        <td>586604</td>
+                        <td>Cicilia Amse</td>
+                        <td>Investing pro + (DigiLite)</td>
+                        <td>08-06-2023 22:03:17</td>
+                        <td><span class="custom-pill orange">Associate</span></td>
+                        <td><span class="custom-pill">Achieve</span></td>
+                        <td>696677</td>
+                        <td>696677</td>
+                        <td>08-06-2023</td>
+                        <td><span class="custom-pill red">Inactive</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                      </td>
+                      <td>1</td>
+                      <td>586604</td>
+                      <td>Cicilia Amse</td>
+                      <td>Investing pro + (DigiLite)</td>
+                      <td>08-06-2023 22:03:17</td>
+                      <td><span class="custom-pill orange">Associate</span></td>
+                      <td><span class="custom-pill">Achieve</span></td>
+                      <td>696677</td>
+                      <td>696677</td>
+                      <td>08-06-2023</td>
+                      <td><span class="custom-pill orange">Inactive</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                      </td>
+                      <td>1</td>
+                      <td>586604</td>
+                      <td>Cicilia Amse</td>
+                      <td>Investing pro + (DigiLite)</td>
+                      <td>08-06-2023 22:03:17</td>
+                      <td><span class="custom-pill orange">Associate</span></td>
+                      <td><span class="custom-pill">Achieve</span></td>
+                      <td>696677</td>
+                      <td>696677</td>
+                      <td>08-06-2023</td>
+                      <td><span class="custom-pill red">Inactive</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                      </td>
+                      <td>1</td>
+                      <td>586604</td>
+                      <td>Cicilia Amse</td>
+                      <td>Investing pro + (DigiLite)</td>
+                      <td>08-06-2023 22:03:17</td>
+                      <td><span class="custom-pill orange">Associate</span></td>
+                      <td><span class="custom-pill">Achieve</span></td>
+                      <td>696677</td>
+                      <td>696677</td>
+                      <td>08-06-2023</td>
+                      <td><span class="custom-pill orange">Inactive</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                      </td>
+                      <td>1</td>
+                      <td>586604</td>
+                      <td>Cicilia Amse</td>
+                      <td>Investing pro + (DigiLite)</td>
+                      <td>08-06-2023 22:03:17</td>
+                      <td><span class="custom-pill orange">Associate</span></td>
+                      <td><span class="custom-pill">Achieve</span></td>
+                      <td>696677</td>
+                      <td>696677</td>
+                      <td>08-06-2023</td>
+                      <td><span class="custom-pill orange">Inactive</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                        <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                      </td>
+                      <td>1</td>
+                      <td>586604</td>
+                      <td>Cicilia Amse</td>
+                      <td>Investing pro + (DigiLite)</td>
+                      <td>08-06-2023 22:03:17</td>
+                      <td><span class="custom-pill orange">Associate</span></td>
+                      <td><span class="custom-pill">Achieve</span></td>
+                      <td>696677</td>
+                      <td>696677</td>
+                      <td>08-06-2023</td>
+                      <td><span class="custom-pill red">Inactive</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                    </td>
+                    <td>1</td>
+                    <td>586604</td>
+                    <td>Cicilia Amse</td>
+                    <td>Investing pro + (DigiLite)</td>
+                    <td>08-06-2023 22:03:17</td>
+                    <td><span class="custom-pill orange">Associate</span></td>
+                    <td><span class="custom-pill">Achieve</span></td>
+                    <td>696677</td>
+                    <td>696677</td>
+                    <td>08-06-2023</td>
+                    <td><span class="custom-pill orange">Inactive</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                    </td>
+                    <td>1</td>
+                    <td>586604</td>
+                    <td>Cicilia Amse</td>
+                    <td>Investing pro + (DigiLite)</td>
+                    <td>08-06-2023 22:03:17</td>
+                    <td><span class="custom-pill orange">Associate</span></td>
+                    <td><span class="custom-pill">Achieve</span></td>
+                    <td>696677</td>
+                    <td>696677</td>
+                    <td>08-06-2023</td>
+                    <td><span class="custom-pill red">Inactive</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                    </td>
+                    <td>1</td>
+                    <td>586604</td>
+                    <td>Cicilia Amse</td>
+                    <td>Investing pro + (DigiLite)</td>
+                    <td>08-06-2023 22:03:17</td>
+                    <td><span class="custom-pill orange">Associate</span></td>
+                    <td><span class="custom-pill">Achieve</span></td>
+                    <td>696677</td>
+                    <td>696677</td>
+                    <td>08-06-2023</td>
+                    <td><span class="custom-pill orange">Inactive</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                    </td>
+                    <td>1</td>
+                    <td>586604</td>
+                    <td>Cicilia Amse</td>
+                    <td>Investing pro + (DigiLite)</td>
+                    <td>08-06-2023 22:03:17</td>
+                    <td><span class="custom-pill orange">Associate</span></td>
+                    <td><span class="custom-pill">Achieve</span></td>
+                    <td>696677</td>
+                    <td>696677</td>
+                    <td>08-06-2023</td>
+                    <td><span class="custom-pill orange">Inactive</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                      <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                    </td>
+                    <td>1</td>
+                    <td>586604</td>
+                    <td>Cicilia Amse</td>
+                    <td>Investing pro + (DigiLite)</td>
+                    <td>08-06-2023 22:03:17</td>
+                    <td><span class="custom-pill orange">Associate</span></td>
+                    <td><span class="custom-pill">Achieve</span></td>
+                    <td>696677</td>
+                    <td>696677</td>
+                    <td>08-06-2023</td>
+                    <td><span class="custom-pill red">Inactive</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                    <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                    <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                    <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                  </td>
+                  <td>1</td>
+                  <td>586604</td>
+                  <td>Cicilia Amse</td>
+                  <td>Investing pro + (DigiLite)</td>
+                  <td>08-06-2023 22:03:17</td>
+                  <td><span class="custom-pill orange">Associate</span></td>
+                  <td><span class="custom-pill">Achieve</span></td>
+                  <td>696677</td>
+                  <td>696677</td>
+                  <td>08-06-2023</td>
+                  <td><span class="custom-pill orange">Inactive</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                    <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                    <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                    <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                  </td>
+                  <td>1</td>
+                  <td>586604</td>
+                  <td>Cicilia Amse</td>
+                  <td>Investing pro + (DigiLite)</td>
+                  <td>08-06-2023 22:03:17</td>
+                  <td><span class="custom-pill orange">Associate</span></td>
+                  <td><span class="custom-pill">Achieve</span></td>
+                  <td>696677</td>
+                  <td>696677</td>
+                  <td>08-06-2023</td>
+                  <td><span class="custom-pill red">Inactive</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                    <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                    <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                    <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                  </td>
+                  <td>1</td>
+                  <td>586604</td>
+                  <td>Cicilia Amse</td>
+                  <td>Investing pro + (DigiLite)</td>
+                  <td>08-06-2023 22:03:17</td>
+                  <td><span class="custom-pill orange">Associate</span></td>
+                  <td><span class="custom-pill">Achieve</span></td>
+                  <td>696677</td>
+                  <td>696677</td>
+                  <td>08-06-2023</td>
+                  <td><span class="custom-pill orange">Inactive</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#" class="action-icon"><img src="assets/edit.png"></a>
+                    <a href="#" class="action-icon"><img src="assets/view.png"></a>
+                    <a href="#" class="action-icon"><img src="assets/print.png"></a>
+                    <a href="#" class="action-icon"><img src="assets/delete.png"></a>
+                  </td>
+                  <td>1</td>
+                  <td>586604</td>
+                  <td>Cicilia Amse</td>
+                  <td>Investing pro + (DigiLite)</td>
+                  <td>08-06-2023 22:03:17</td>
+                  <td><span class="custom-pill orange">Associate</span></td>
+                  <td><span class="custom-pill">Achieve</span></td>
+                  <td>696677</td>
+                  <td>696677</td>
+                  <td>08-06-2023</td>
+                  <td><span class="custom-pill orange">Inactive</span></td>
+                </tr>
+
+                   
+            
+                </tbody>
+              </table>
+            </div>
+          </div>
+    </section>
+      
+  </div>
+</div>
+
+<script src="datatable/jquery.dataTables.min.js"></script>
+<script src="datatable/dataTables.responsive.js"></script>
+
+<script>
+  $(document).ready(function () {
+    var table = $('#user-record').DataTable({
+            responsive: true,
+            "ordering": false,
+            "paging": true,
+            "searching": false,
+            "info":true,
+            columnDefs: [
+              { responsivePriority: 1, targets: 0 },
+              { responsivePriority: 10, targets: 4 }
+            ],
+            language: {
+              paginate: {
+              next: '<img src="assets/right-arrow-border.png">',
+              previous: '<img src="assets/left-arrow-border.png">'  
+              },
+              "sLengthMenu": "Go to _MENU_",
+              
+            },
+            dom: 'rt<"bottom"ipfl>'
+           
+    });
+    var info = table.page.info();
+    //$('#user-record_info').html('Total '+(info.recordsTotal));
+  });
+</script>
+ 
+    

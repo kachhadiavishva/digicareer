@@ -1,0 +1,103 @@
+<head>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script> 
+      $(function(){ $("#myHeader").load("includes/full_header.html") });
+      $(function(){ $("#mysidebar").load("includes/sidebar.html") });
+   </script>
+    
+<header id="myHeader"></header>
+<div class="wrapper gc-top-section">
+
+    <!--side bar should here-->
+    <section id="mysidebar"></section>  
+    
+    <!-- other page content should be here  -->
+    <div id="content">
+        <div class="md-stepper-horizontal orange">
+            <div class="md-step active">
+              <div class="md-step-circle"><span>1</span></div>
+              <div class="md-step-title">Items</div>
+              <div class="md-step-bar-left"></div>
+              <div class="md-step-bar-right"></div>
+            </div>
+            <div class="md-step ">
+              <div class="md-step-circle"><span>2</span></div>
+              <div class="md-step-title">Delivery</div>
+              <div class="md-step-bar-left"></div>
+              <div class="md-step-bar-right"></div>
+            </div>
+            <div class="md-step">
+              <div class="md-step-circle"><span>3</span></div>
+              <div class="md-step-title">Confirmation</div>
+              <div class="md-step-bar-left"></div>
+              <div class="md-step-bar-right"></div>
+            </div>
+           
+        </div>
+
+        <div class="row checkout-box">
+            <div class="col-xl-8 col-lg-12 col-md-12 col-12">
+                <div class="product-card">
+                   <p class="text-darker">
+                    Your Cart
+                   </p>
+                   <hr>
+                   <div class="checkout-dtl">
+                       <div class="title-dtl">
+                           <img src="assets/campaign-creators.png">
+                           <div>
+                            <p class="text-darker">Oxidoc Super Antioxidant Drink</p>
+                            <p class="text-lighter">1 litre,</p>
+                           </div>
+                        </div>
+                        <div class="action-dtl">
+                            <div class="quantity-div">
+                                <span class="plus-minus">-</span>
+                                <span>1</span>
+                                <span class="plus-minus">+</span>
+                            </div>
+                            <p><i class="fa fa-inr"></i>  15000.00</p>
+                            <a href=""><img src="assets/delete-red.png"></a>
+                        </div>
+                   </div>
+                </div>
+
+            </div>
+            <div class="col-xl-4 col-lg-12 col-sm-12 col-12">
+                <div class="product-card">
+                    <div class="pricing-dtl-checkout">
+                        <p class="text-darker">Subtotal</p>
+                        <p class="text-darker"><i class="fa fa-inr"></i>  13392.90</p>
+                    </div>
+                    <div class="pricing-dtl-checkout">
+                        <p class="text-lighter">TAX</p>
+                        <p class="text-lighter"><i class="fa fa-inr"></i>  13392.90</p>
+                    </div>
+                    <div class="pricing-dtl-checkout">
+                        <p class="text-lighter">Shipping</p>
+                        <p class="text-lighter"><i class="fa fa-inr"></i>  13392.90</p>
+                    </div>
+                    <div class="pricing-dtl-checkout">
+                        <p class="text-lighter">Distributor Discount</p>
+                        <p class="text-lighter"><i class="fa fa-inr"></i>  1.90</p>
+                    </div>
+                    <div class="pricing-dtl-checkout">
+                        <p class="text-lighter">Total BV</p>
+                        <p class="text-lighter"><i class="fa fa-inr"></i>  13392.90</p>
+                    </div>
+                    <hr>
+                    <div class="pricing-dtl-checkout">
+                        <p class="text-darker">Total</p>
+                        <p class="text-darker"><i class="fa fa-inr"></i>  13392.90</p>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn checkout-btn">
+                            Checkout
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
