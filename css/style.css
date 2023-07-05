@@ -1674,6 +1674,12 @@ span.custom-pill {
    .dataTables_wrapper .dataTables_length {
     width: 100%;
 }
+.top-section-slider img.prev.slick-arrow {
+   width: 21px !important;
+}
+.top-section-slider img.next.slick-arrow {
+  width: 21px  !important;
+}
 }
 
 
@@ -2588,6 +2594,11 @@ a.btn.remove-cart-btn {
 .action-dtl img {
     margin-top: 10px;
 }
+
+.courses-section .gc-tab-box{
+  padding: 15px 15px;
+  width: 100%;
+}
 }
 
 /*-----product dtails-------*/
@@ -2691,6 +2702,7 @@ a.btn.remove-cart-btn {
 }
 .quantity-div span.plus-minus {
   color: #48B1E8;
+  cursor: pointer;
 }
 .quantity-div span {
   padding: 0px 10px;
@@ -2882,3 +2894,80 @@ button.btn.checkout-btn {
   font-weight: 500;
   line-height: normal;
 }
+
+/*----radio-------*/
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 20px;
+  margin-right: 10px;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #48B1E8;
+  border-radius: 100%;
+  background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: #48B1E8;
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.fav-product,.unfav-product{
+  width: 30px;
+  height: 30px !important;
+  position: absolute;
+  cursor: pointer;
+  transition: 2s;
+}
+
+.top-section-slider img.next.slick-arrow {
+  position: absolute;
+  bottom: 50%;
+  z-index: 99;
+  right: 20px;
+  width: 34px;
+  cursor: pointer;
+}
+.top-section-slider img.prev.slick-arrow {
+  position: absolute;
+  bottom: 50%;
+  z-index: 99;
+  left: 20px;
+  width: 34px;
+  cursor: pointer;
+}
+

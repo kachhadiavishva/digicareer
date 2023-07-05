@@ -3,15 +3,16 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script>
   $(function() {
-    $(".preload").fadeOut(2000, function() {
-        $("body").fadeIn(1000);        
-    });
+    setTimeout(function(){
+        $(".preload").css('visibility','hidden');
+        $("body").css('visibility','visible');
+    }, 2000);
   });
 </script>
 <section class="preload"></section>
 
 <style>
-body {display:none;}
+body {visibility: hidden;}
 .preload { 
     width:100px;
     height: 100px;
@@ -20,6 +21,8 @@ body {display:none;}
     left: 50%;
     background-image: url('https://i.imgur.com/KUJoe.gif');
     background-repeat: no-repeat;
+    visibility:visible;
+    background-size: 100% 100%;
 }
 </style>
 
