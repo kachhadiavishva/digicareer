@@ -2974,7 +2974,7 @@ button.btn.checkout-btn {
 /*-----------story popup-----------*/
 .modal-open .story-popup.modal {
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   outline: 0 !important;
   position: fixed;
   top: 0;
@@ -3079,6 +3079,12 @@ button.btn.checkout-btn {
 }
 .story-logo{
   width: 100px;
+}
+
+.slider-length img{
+  display: inline-block;
+    height: 450px !important;
+    object-fit: contain;
 }
 
 @media (max-width:575px) {
