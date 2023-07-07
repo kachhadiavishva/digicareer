@@ -13,6 +13,7 @@ $(document).ready(function () {
       nextArrow: '<img src="assets/right-arrow-blue.png" class="next">',
     });
   }
+ 
 
 if ($('.dc-team-slick').length) {
   $('.dc-team-slick').slick({
@@ -280,7 +281,8 @@ setInterval(() => {
 }, 2000);
 
 setTimeout(() => {
-   $('.top-section-slider').slick('refresh')
+   $('.top-section-slider').slick('refresh');
+   //$('.slider').slick('refresh');
 }, 2000);
 
  $('.dropdown').on('show.bs.dropdown', function() {
@@ -596,6 +598,100 @@ $(document).on('click','.fav-product',function(){
 $(document).on('click','.unfav-product',function(){
   $(this).attr('src','assets/heart.png')
   $(this).removeClass().addClass('fav-product');
+});
+
+
+//
+$(document).ready(function(){
+  
+	
+$('.modal-open').click(function() {
+    $('#exampleModal').modal('show');
+    $('.slider').slick('refresh');
+  
+  var totalSlide = $('.progress-css').length;
+  var percentTime;
+  var tick;
+  var time = 1;
+  var progressBarIndex = 0;
+
+  //give width to progress
+  $('.progressBarContainer .progress-css').each(function(index) {
+    var width = (90/totalSlide)+'%';
+    $(this).css('width',width);
+});
+
+  $('.progressBarContainer .progressBar').each(function(index) {
+      var progress = "<div class='inProgress inProgress" + index + "'></div>";
+      $(this).html(progress);
+  });
+
+  function startProgressbar() {
+      resetProgressbar();
+      percentTime = 0;
+      if(progressBarIndex < Number(totalSlide)){
+        tick = setInterval(interval, 10);
+      }else{
+        progressBarIndex = 0;
+        $('#exampleModal').modal('hide');
+        
+        return false;
+      }
+  }
+
+  function interval() {
+      if (($('.slider .slick-track div[data-slick-index="' + progressBarIndex + '"]').attr("aria-hidden")) === "true") {
+          progressBarIndex = $('.slider .slick-track div[aria-hidden="false"]').data("slickIndex");
+           startProgressbar();
+      } else {
+         percentTime += 1 / (time + 5);
+          $('.inProgress' + progressBarIndex).css({
+              width: percentTime + "%"
+          });
+               
+          if (percentTime >= 100) {
+              $('.single-item').slick('slickNext');
+              progressBarIndex++;
+              if (progressBarIndex > 2) {
+                  //progressBarIndex = 0;
+                 
+              }
+              startProgressbar();
+          }
+      }
+  }
+
+  function resetProgressbar() {
+      $('.inProgress').css({
+          width: 0 + '%'
+      });
+      clearInterval(tick);
+  }
+  startProgressbar();
+  // End ticking machine
+
+  $('.progressBarContainer div').click(function () {
+    clearInterval(tick);
+    var goToThisIndex = $(this).find("span").data("slickIndex");
+    $('.single-item').slick('slickGoTo', goToThisIndex, false);
+    startProgressbar();
+  });
+});
+
+
+
+$(".slider").slick({
+  infinite: true,
+  arrows: false,
+  dots: false,
+  autoplay: false,
+  speed: 800,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  });
+
+  
+
 });
 
 

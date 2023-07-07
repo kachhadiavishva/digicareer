@@ -180,3 +180,12 @@ a[aria-expanded="true"]::after {
     width: 3px;
     height: 7px;
 }
+#sidebarCollapse .fa-arrow-right{
+    color: #FEAD00;
+    transition: 1s;
+    -webkit-animation: uparrow 0.6s infinite alternate ease-in-out;
+}
+@-webkit-keyframes uparrow {
+    0% { -webkit-transform: translateX(0); opacity: 0.7 }
+    100% { -webkit-transform: translateX(-0.4em); opacity: 1 }
+  }
