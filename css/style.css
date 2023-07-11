@@ -344,10 +344,12 @@ p.submenu-title img{
   border-radius: 0px !important;
   width: 30px !important;
   margin-right: 10px;
+  height: 30px !important;
 }
 .gc-course-point img.small-icon{
   width: 15px !important;
   margin-left: 8px;
+  height: 15px !important;
 }
 .gc-course-point p{
   margin-top: 19px;
@@ -657,8 +659,14 @@ details[open] div {
 }
 
 @media (max-width:991.5px) {
+  .navbar {
+    position: relative !important;
+  }
+  .gc-top-section {
+    margin-top:0px !important;
+}
   .navbar-collapse.collapse.show{
-    height: 300px;
+    height: auto;
     overflow-y: auto;
     overflow-x: hidden;
     display: block;
@@ -695,6 +703,15 @@ details[open] div {
     padding-right: 15px;
     padding-left: 15px;
   }
+  .courses-section .gc-courses-details .gc-tab-section {
+     display: block;
+    text-align: center;
+    white-space: unset;
+
+}
+.courses-section .gc-tab-box {
+  margin: 0px 0px 20px 0px !important;
+}
 }
 
 @media (min-width: 992px){
